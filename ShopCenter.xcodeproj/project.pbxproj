@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		042609991F78EF750051B9C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609981F78EF750051B9C4 /* AppDelegate.m */; };
+		0426099F1F78EF750051B9C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0426099D1F78EF750051B9C4 /* Main.storyboard */; };
+		042609A11F78EF750051B9C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042609A01F78EF750051B9C4 /* Assets.xcassets */; };
+		042609A41F78EF750051B9C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042609A21F78EF750051B9C4 /* LaunchScreen.storyboard */; };
+		042609A71F78EF750051B9C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609A61F78EF750051B9C4 /* main.m */; };
+		042609B11F78EF750051B9C4 /* ShopCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609B01F78EF750051B9C4 /* ShopCenterTests.m */; };
+		042609BC1F78EF750051B9C4 /* ShopCenterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609BB1F78EF750051B9C4 /* ShopCenterUITests.m */; };
+		042609DD1F78F0120051B9C4 /* ShopItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609CB1F78F0120051B9C4 /* ShopItemViewController.m */; };
+		042609DE1F78F0120051B9C4 /* ShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609CD1F78F0120051B9C4 /* ShopListViewController.m */; };
+		042609DF1F78F0120051B9C4 /* BigImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609D01F78F0120051B9C4 /* BigImageView.m */; };
+		042609E01F78F0120051B9C4 /* ChoosedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609D21F78F0120051B9C4 /* ChoosedTableViewCell.m */; };
+		042609E11F78F0120051B9C4 /* ChoosedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042609D31F78F0120051B9C4 /* ChoosedTableViewCell.xib */; };
+		042609E21F78F0120051B9C4 /* CompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609D51F78F0120051B9C4 /* CompanyTableViewCell.m */; };
+		042609E31F78F0120051B9C4 /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042609D61F78F0120051B9C4 /* CompanyTableViewCell.xib */; };
+		042609E41F78F0120051B9C4 /* ShopDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609D81F78F0120051B9C4 /* ShopDetailTableViewCell.m */; };
+		042609E51F78F0120051B9C4 /* ShopDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042609D91F78F0120051B9C4 /* ShopDetailTableViewCell.xib */; };
+		042609E61F78F0120051B9C4 /* ShopListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042609DB1F78F0120051B9C4 /* ShopListTableViewCell.m */; };
+		042609E71F78F0120051B9C4 /* ShopListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042609DC1F78F0120051B9C4 /* ShopListTableViewCell.xib */; };
+		042609E91F78F1830051B9C4 /* province.plist in Sources */ = {isa = PBXBuildFile; fileRef = 042609E81F78F1260051B9C4 /* province.plist */; };
+		046D0B411F7CA2FB0004654F /* ShopItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D0B401F7CA2FB0004654F /* ShopItemModel.m */; };
+		046D0B451F7CA3910004654F /* ShopItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D0B441F7CA3910004654F /* ShopItemViewModel.m */; };
+		046D0B481F7CCD5C0004654F /* shopItem.db in Resources */ = {isa = PBXBuildFile; fileRef = 046D0B471F7CCC8B0004654F /* shopItem.db */; };
+		046D0B4B1F7CEFEE0004654F /* ComfirmItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D0B4A1F7CEFEE0004654F /* ComfirmItemView.m */; };
+		046D0B4D1F7CF0430004654F /* ComfirmItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046D0B4C1F7CF0430004654F /* ComfirmItemView.xib */; };
+		046D0B501F7E3E930004654F /* FiltView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D0B4F1F7E3E930004654F /* FiltView.m */; };
+		046D0B521F7E3EAA0004654F /* FiltView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046D0B511F7E3EAA0004654F /* FiltView.xib */; };
+		046D0B561F7E42540004654F /* PriceRangeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D0B541F7E42540004654F /* PriceRangeTableViewCell.m */; };
+		046D0B571F7E42540004654F /* PriceRangeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046D0B551F7E42540004654F /* PriceRangeTableViewCell.xib */; };
+		84A4318CD5698E897051E003 /* libPods-ShopCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00ECDFEFAA5B15196B9F0948 /* libPods-ShopCenter.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		042609AD1F78EF750051B9C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0426098C1F78EF750051B9C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 042609931F78EF750051B9C4;
+			remoteInfo = ShopCenter;
+		};
+		042609B81F78EF750051B9C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0426098C1F78EF750051B9C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 042609931F78EF750051B9C4;
+			remoteInfo = ShopCenter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00ECDFEFAA5B15196B9F0948 /* libPods-ShopCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShopCenter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		042609941F78EF750051B9C4 /* ShopCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		042609971F78EF750051B9C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		042609981F78EF750051B9C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0426099E1F78EF750051B9C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		042609A01F78EF750051B9C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		042609A31F78EF750051B9C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		042609A51F78EF750051B9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042609A61F78EF750051B9C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		042609AC1F78EF750051B9C4 /* ShopCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		042609B01F78EF750051B9C4 /* ShopCenterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopCenterTests.m; sourceTree = "<group>"; };
+		042609B21F78EF750051B9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042609B71F78EF750051B9C4 /* ShopCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		042609BB1F78EF750051B9C4 /* ShopCenterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopCenterUITests.m; sourceTree = "<group>"; };
+		042609BD1F78EF750051B9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042609CA1F78F0120051B9C4 /* ShopItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopItemViewController.h; sourceTree = "<group>"; };
+		042609CB1F78F0120051B9C4 /* ShopItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopItemViewController.m; sourceTree = "<group>"; };
+		042609CC1F78F0120051B9C4 /* ShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopListViewController.h; sourceTree = "<group>"; };
+		042609CD1F78F0120051B9C4 /* ShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopListViewController.m; sourceTree = "<group>"; };
+		042609CF1F78F0120051B9C4 /* BigImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigImageView.h; sourceTree = "<group>"; };
+		042609D01F78F0120051B9C4 /* BigImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigImageView.m; sourceTree = "<group>"; };
+		042609D11F78F0120051B9C4 /* ChoosedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosedTableViewCell.h; sourceTree = "<group>"; };
+		042609D21F78F0120051B9C4 /* ChoosedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosedTableViewCell.m; sourceTree = "<group>"; };
+		042609D31F78F0120051B9C4 /* ChoosedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoosedTableViewCell.xib; sourceTree = "<group>"; };
+		042609D41F78F0120051B9C4 /* CompanyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyTableViewCell.h; sourceTree = "<group>"; };
+		042609D51F78F0120051B9C4 /* CompanyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyTableViewCell.m; sourceTree = "<group>"; };
+		042609D61F78F0120051B9C4 /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
+		042609D71F78F0120051B9C4 /* ShopDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopDetailTableViewCell.h; sourceTree = "<group>"; };
+		042609D81F78F0120051B9C4 /* ShopDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopDetailTableViewCell.m; sourceTree = "<group>"; };
+		042609D91F78F0120051B9C4 /* ShopDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailTableViewCell.xib; sourceTree = "<group>"; };
+		042609DA1F78F0120051B9C4 /* ShopListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopListTableViewCell.h; sourceTree = "<group>"; };
+		042609DB1F78F0120051B9C4 /* ShopListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopListTableViewCell.m; sourceTree = "<group>"; };
+		042609DC1F78F0120051B9C4 /* ShopListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopListTableViewCell.xib; sourceTree = "<group>"; };
+		042609E81F78F1260051B9C4 /* province.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = province.plist; sourceTree = "<group>"; };
+		046D0B3F1F7CA2FB0004654F /* ShopItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopItemModel.h; sourceTree = "<group>"; };
+		046D0B401F7CA2FB0004654F /* ShopItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopItemModel.m; sourceTree = "<group>"; };
+		046D0B431F7CA3910004654F /* ShopItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopItemViewModel.h; sourceTree = "<group>"; };
+		046D0B441F7CA3910004654F /* ShopItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopItemViewModel.m; sourceTree = "<group>"; };
+		046D0B471F7CCC8B0004654F /* shopItem.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = shopItem.db; sourceTree = "<group>"; };
+		046D0B491F7CEFEE0004654F /* ComfirmItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComfirmItemView.h; sourceTree = "<group>"; };
+		046D0B4A1F7CEFEE0004654F /* ComfirmItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComfirmItemView.m; sourceTree = "<group>"; };
+		046D0B4C1F7CF0430004654F /* ComfirmItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComfirmItemView.xib; sourceTree = "<group>"; };
+		046D0B4E1F7E3E930004654F /* FiltView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FiltView.h; sourceTree = "<group>"; };
+		046D0B4F1F7E3E930004654F /* FiltView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FiltView.m; sourceTree = "<group>"; };
+		046D0B511F7E3EAA0004654F /* FiltView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltView.xib; sourceTree = "<group>"; };
+		046D0B531F7E42540004654F /* PriceRangeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriceRangeTableViewCell.h; sourceTree = "<group>"; };
+		046D0B541F7E42540004654F /* PriceRangeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PriceRangeTableViewCell.m; sourceTree = "<group>"; };
+		046D0B551F7E42540004654F /* PriceRangeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceRangeTableViewCell.xib; sourceTree = "<group>"; };
+		20CF67FC4E85ECC264E26C35 /* Pods-ShopCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopCenter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopCenter/Pods-ShopCenter.debug.xcconfig"; sourceTree = "<group>"; };
+		37EED3AFC69F2F8BCC8B7403 /* Pods-ShopCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopCenter.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopCenter/Pods-ShopCenter.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		042609911F78EF750051B9C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A4318CD5698E897051E003 /* libPods-ShopCenter.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		042609A91F78EF750051B9C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		042609B41F78EF750051B9C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0426098B1F78EF750051B9C4 = {
+			isa = PBXGroup;
+			children = (
+				042609961F78EF750051B9C4 /* ShopCenter */,
+				042609AF1F78EF750051B9C4 /* ShopCenterTests */,
+				042609BA1F78EF750051B9C4 /* ShopCenterUITests */,
+				042609951F78EF750051B9C4 /* Products */,
+				2007C4EEC5F3BAA42B5592CB /* Pods */,
+				4B31D5287EF36DAE258EB8B5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		042609951F78EF750051B9C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				042609941F78EF750051B9C4 /* ShopCenter.app */,
+				042609AC1F78EF750051B9C4 /* ShopCenterTests.xctest */,
+				042609B71F78EF750051B9C4 /* ShopCenterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		042609961F78EF750051B9C4 /* ShopCenter */ = {
+			isa = PBXGroup;
+			children = (
+				046D0B421F7CA3730004654F /* viewModel */,
+				046D0B3E1F7CA2CA0004654F /* model */,
+				042609CE1F78F0120051B9C4 /* view */,
+				042609C91F78F0120051B9C4 /* controller */,
+				042609971F78EF750051B9C4 /* AppDelegate.h */,
+				042609981F78EF750051B9C4 /* AppDelegate.m */,
+				046D0B471F7CCC8B0004654F /* shopItem.db */,
+				042609E81F78F1260051B9C4 /* province.plist */,
+				0426099D1F78EF750051B9C4 /* Main.storyboard */,
+				042609A01F78EF750051B9C4 /* Assets.xcassets */,
+				042609A21F78EF750051B9C4 /* LaunchScreen.storyboard */,
+				042609A51F78EF750051B9C4 /* Info.plist */,
+				042609A61F78EF750051B9C4 /* main.m */,
+			);
+			path = ShopCenter;
+			sourceTree = "<group>";
+		};
+		042609AF1F78EF750051B9C4 /* ShopCenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				042609B01F78EF750051B9C4 /* ShopCenterTests.m */,
+				042609B21F78EF750051B9C4 /* Info.plist */,
+			);
+			path = ShopCenterTests;
+			sourceTree = "<group>";
+		};
+		042609BA1F78EF750051B9C4 /* ShopCenterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				042609BB1F78EF750051B9C4 /* ShopCenterUITests.m */,
+				042609BD1F78EF750051B9C4 /* Info.plist */,
+			);
+			path = ShopCenterUITests;
+			sourceTree = "<group>";
+		};
+		042609C91F78F0120051B9C4 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				042609CA1F78F0120051B9C4 /* ShopItemViewController.h */,
+				042609CB1F78F0120051B9C4 /* ShopItemViewController.m */,
+				042609CC1F78F0120051B9C4 /* ShopListViewController.h */,
+				042609CD1F78F0120051B9C4 /* ShopListViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		042609CE1F78F0120051B9C4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				042609CF1F78F0120051B9C4 /* BigImageView.h */,
+				042609D01F78F0120051B9C4 /* BigImageView.m */,
+				042609D11F78F0120051B9C4 /* ChoosedTableViewCell.h */,
+				042609D21F78F0120051B9C4 /* ChoosedTableViewCell.m */,
+				042609D31F78F0120051B9C4 /* ChoosedTableViewCell.xib */,
+				042609D41F78F0120051B9C4 /* CompanyTableViewCell.h */,
+				042609D51F78F0120051B9C4 /* CompanyTableViewCell.m */,
+				042609D61F78F0120051B9C4 /* CompanyTableViewCell.xib */,
+				042609D71F78F0120051B9C4 /* ShopDetailTableViewCell.h */,
+				042609D81F78F0120051B9C4 /* ShopDetailTableViewCell.m */,
+				042609D91F78F0120051B9C4 /* ShopDetailTableViewCell.xib */,
+				042609DA1F78F0120051B9C4 /* ShopListTableViewCell.h */,
+				042609DB1F78F0120051B9C4 /* ShopListTableViewCell.m */,
+				042609DC1F78F0120051B9C4 /* ShopListTableViewCell.xib */,
+				046D0B491F7CEFEE0004654F /* ComfirmItemView.h */,
+				046D0B4A1F7CEFEE0004654F /* ComfirmItemView.m */,
+				046D0B4C1F7CF0430004654F /* ComfirmItemView.xib */,
+				046D0B4E1F7E3E930004654F /* FiltView.h */,
+				046D0B4F1F7E3E930004654F /* FiltView.m */,
+				046D0B511F7E3EAA0004654F /* FiltView.xib */,
+				046D0B531F7E42540004654F /* PriceRangeTableViewCell.h */,
+				046D0B541F7E42540004654F /* PriceRangeTableViewCell.m */,
+				046D0B551F7E42540004654F /* PriceRangeTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		046D0B3E1F7CA2CA0004654F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				046D0B3F1F7CA2FB0004654F /* ShopItemModel.h */,
+				046D0B401F7CA2FB0004654F /* ShopItemModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		046D0B421F7CA3730004654F /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				046D0B431F7CA3910004654F /* ShopItemViewModel.h */,
+				046D0B441F7CA3910004654F /* ShopItemViewModel.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		2007C4EEC5F3BAA42B5592CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20CF67FC4E85ECC264E26C35 /* Pods-ShopCenter.debug.xcconfig */,
+				37EED3AFC69F2F8BCC8B7403 /* Pods-ShopCenter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4B31D5287EF36DAE258EB8B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00ECDFEFAA5B15196B9F0948 /* libPods-ShopCenter.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		042609931F78EF750051B9C4 /* ShopCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 042609C01F78EF750051B9C4 /* Build configuration list for PBXNativeTarget "ShopCenter" */;
+			buildPhases = (
+				EB0F6BF4033C37505A59716F /* [CP] Check Pods Manifest.lock */,
+				042609901F78EF750051B9C4 /* Sources */,
+				042609911F78EF750051B9C4 /* Frameworks */,
+				042609921F78EF750051B9C4 /* Resources */,
+				CBA8C7D10289E48E5B03D155 /* [CP] Embed Pods Frameworks */,
+				2CE0DD748DD0622CD8DFF182 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShopCenter;
+			productName = ShopCenter;
+			productReference = 042609941F78EF750051B9C4 /* ShopCenter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		042609AB1F78EF750051B9C4 /* ShopCenterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 042609C31F78EF750051B9C4 /* Build configuration list for PBXNativeTarget "ShopCenterTests" */;
+			buildPhases = (
+				042609A81F78EF750051B9C4 /* Sources */,
+				042609A91F78EF750051B9C4 /* Frameworks */,
+				042609AA1F78EF750051B9C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				042609AE1F78EF750051B9C4 /* PBXTargetDependency */,
+			);
+			name = ShopCenterTests;
+			productName = ShopCenterTests;
+			productReference = 042609AC1F78EF750051B9C4 /* ShopCenterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		042609B61F78EF750051B9C4 /* ShopCenterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 042609C61F78EF750051B9C4 /* Build configuration list for PBXNativeTarget "ShopCenterUITests" */;
+			buildPhases = (
+				042609B31F78EF750051B9C4 /* Sources */,
+				042609B41F78EF750051B9C4 /* Frameworks */,
+				042609B51F78EF750051B9C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				042609B91F78EF750051B9C4 /* PBXTargetDependency */,
+			);
+			name = ShopCenterUITests;
+			productName = ShopCenterUITests;
+			productReference = 042609B71F78EF750051B9C4 /* ShopCenterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0426098C1F78EF750051B9C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = wenzhe;
+				TargetAttributes = {
+					042609931F78EF750051B9C4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					042609AB1F78EF750051B9C4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 042609931F78EF750051B9C4;
+					};
+					042609B61F78EF750051B9C4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 042609931F78EF750051B9C4;
+					};
+				};
+			};
+			buildConfigurationList = 0426098F1F78EF750051B9C4 /* Build configuration list for PBXProject "ShopCenter" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0426098B1F78EF750051B9C4;
+			productRefGroup = 042609951F78EF750051B9C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				042609931F78EF750051B9C4 /* ShopCenter */,
+				042609AB1F78EF750051B9C4 /* ShopCenterTests */,
+				042609B61F78EF750051B9C4 /* ShopCenterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		042609921F78EF750051B9C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D0B481F7CCD5C0004654F /* shopItem.db in Resources */,
+				042609A41F78EF750051B9C4 /* LaunchScreen.storyboard in Resources */,
+				042609E11F78F0120051B9C4 /* ChoosedTableViewCell.xib in Resources */,
+				046D0B521F7E3EAA0004654F /* FiltView.xib in Resources */,
+				046D0B571F7E42540004654F /* PriceRangeTableViewCell.xib in Resources */,
+				042609E71F78F0120051B9C4 /* ShopListTableViewCell.xib in Resources */,
+				046D0B4D1F7CF0430004654F /* ComfirmItemView.xib in Resources */,
+				042609E51F78F0120051B9C4 /* ShopDetailTableViewCell.xib in Resources */,
+				042609E31F78F0120051B9C4 /* CompanyTableViewCell.xib in Resources */,
+				042609A11F78EF750051B9C4 /* Assets.xcassets in Resources */,
+				0426099F1F78EF750051B9C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		042609AA1F78EF750051B9C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		042609B51F78EF750051B9C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CE0DD748DD0622CD8DFF182 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShopCenter/Pods-ShopCenter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBA8C7D10289E48E5B03D155 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShopCenter/Pods-ShopCenter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB0F6BF4033C37505A59716F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		042609901F78EF750051B9C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D0B561F7E42540004654F /* PriceRangeTableViewCell.m in Sources */,
+				042609E91F78F1830051B9C4 /* province.plist in Sources */,
+				042609DE1F78F0120051B9C4 /* ShopListViewController.m in Sources */,
+				042609A71F78EF750051B9C4 /* main.m in Sources */,
+				046D0B501F7E3E930004654F /* FiltView.m in Sources */,
+				042609DD1F78F0120051B9C4 /* ShopItemViewController.m in Sources */,
+				042609E01F78F0120051B9C4 /* ChoosedTableViewCell.m in Sources */,
+				046D0B4B1F7CEFEE0004654F /* ComfirmItemView.m in Sources */,
+				042609E41F78F0120051B9C4 /* ShopDetailTableViewCell.m in Sources */,
+				046D0B411F7CA2FB0004654F /* ShopItemModel.m in Sources */,
+				042609E21F78F0120051B9C4 /* CompanyTableViewCell.m in Sources */,
+				042609E61F78F0120051B9C4 /* ShopListTableViewCell.m in Sources */,
+				042609991F78EF750051B9C4 /* AppDelegate.m in Sources */,
+				042609DF1F78F0120051B9C4 /* BigImageView.m in Sources */,
+				046D0B451F7CA3910004654F /* ShopItemViewModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		042609A81F78EF750051B9C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				042609B11F78EF750051B9C4 /* ShopCenterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		042609B31F78EF750051B9C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				042609BC1F78EF750051B9C4 /* ShopCenterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		042609AE1F78EF750051B9C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 042609931F78EF750051B9C4 /* ShopCenter */;
+			targetProxy = 042609AD1F78EF750051B9C4 /* PBXContainerItemProxy */;
+		};
+		042609B91F78EF750051B9C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 042609931F78EF750051B9C4 /* ShopCenter */;
+			targetProxy = 042609B81F78EF750051B9C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0426099D1F78EF750051B9C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0426099E1F78EF750051B9C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		042609A21F78EF750051B9C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				042609A31F78EF750051B9C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		042609BE1F78EF750051B9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		042609BF1F78EF750051B9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		042609C11F78EF750051B9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20CF67FC4E85ECC264E26C35 /* Pods-ShopCenter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BVV9BG88R;
+				INFOPLIST_FILE = ShopCenter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.pingan.ShopCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		042609C21F78EF750051B9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37EED3AFC69F2F8BCC8B7403 /* Pods-ShopCenter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BVV9BG88R;
+				INFOPLIST_FILE = ShopCenter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.pingan.ShopCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		042609C41F78EF750051B9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BVV9BG88R;
+				INFOPLIST_FILE = ShopCenterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.pingan.ShopCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopCenter.app/ShopCenter";
+			};
+			name = Debug;
+		};
+		042609C51F78EF750051B9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BVV9BG88R;
+				INFOPLIST_FILE = ShopCenterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.pingan.ShopCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopCenter.app/ShopCenter";
+			};
+			name = Release;
+		};
+		042609C71F78EF750051B9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BVV9BG88R;
+				INFOPLIST_FILE = ShopCenterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.pingan.ShopCenterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShopCenter;
+			};
+			name = Debug;
+		};
+		042609C81F78EF750051B9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BVV9BG88R;
+				INFOPLIST_FILE = ShopCenterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.pingan.ShopCenterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShopCenter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0426098F1F78EF750051B9C4 /* Build configuration list for PBXProject "ShopCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042609BE1F78EF750051B9C4 /* Debug */,
+				042609BF1F78EF750051B9C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		042609C01F78EF750051B9C4 /* Build configuration list for PBXNativeTarget "ShopCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042609C11F78EF750051B9C4 /* Debug */,
+				042609C21F78EF750051B9C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		042609C31F78EF750051B9C4 /* Build configuration list for PBXNativeTarget "ShopCenterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042609C41F78EF750051B9C4 /* Debug */,
+				042609C51F78EF750051B9C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		042609C61F78EF750051B9C4 /* Build configuration list for PBXNativeTarget "ShopCenterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042609C71F78EF750051B9C4 /* Debug */,
+				042609C81F78EF750051B9C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0426098C1F78EF750051B9C4 /* Project object */;
+}

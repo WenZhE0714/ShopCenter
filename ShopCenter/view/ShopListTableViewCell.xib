@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="126" id="KGk-i7-Jjw" customClass="ShopListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jO1-fg-vxT">
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="125" id="q5c-1e-6Ba"/>
+                            <constraint firstAttribute="width" constant="125" id="zaW-64-KaQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPv-X0-SJE">
+                        <rect key="frame" x="130" y="17.5" width="230" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="230" id="Dzg-dk-oaG"/>
+                            <constraint firstAttribute="height" constant="33" id="Jk4-mX-I76"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="368.00元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvi-ep-WhX">
+                        <rect key="frame" x="130" y="95" width="100" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="SgC-GR-Rn9"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="nHK-0n-vL2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.9118037223815918" green="0.36313937393661155" blue="0.45812563963392067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月销9999+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIZ-mz-gb7">
+                        <rect key="frame" x="287" y="91.5" width="70" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="0Hk-n4-zOh"/>
+                            <constraint firstAttribute="height" constant="18" id="kp9-hb-Yk2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzS-Aa-kQj">
+                        <rect key="frame" x="125" y="125" width="250" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Rhj-7B-aWg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qzS-Aa-kQj" secondAttribute="bottom" id="20Y-i6-tId"/>
+                    <constraint firstItem="Xvi-ep-WhX" firstAttribute="leading" secondItem="jO1-fg-vxT" secondAttribute="trailing" constant="5" id="2fW-Bq-egF"/>
+                    <constraint firstAttribute="trailing" secondItem="qzS-Aa-kQj" secondAttribute="trailing" id="8Pf-xo-TRb"/>
+                    <constraint firstItem="qzS-Aa-kQj" firstAttribute="leading" secondItem="jO1-fg-vxT" secondAttribute="trailing" id="Hbh-N4-hTH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="CIZ-mz-gb7" secondAttribute="bottom" constant="8" id="K4F-3Q-pmN"/>
+                    <constraint firstItem="jO1-fg-vxT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MVP-3m-eNM"/>
+                    <constraint firstItem="CIZ-mz-gb7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-10" id="Ovp-fT-APR"/>
+                    <constraint firstItem="kPv-X0-SJE" firstAttribute="leading" secondItem="jO1-fg-vxT" secondAttribute="trailing" constant="5" id="S5H-rK-cqK"/>
+                    <constraint firstItem="kPv-X0-SJE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9.5" id="a6T-kE-v3h"/>
+                    <constraint firstItem="jO1-fg-vxT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b1z-9J-ElO"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Xvi-ep-WhX" secondAttribute="bottom" constant="5" id="neR-5l-rtK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="itemImageView" destination="jO1-fg-vxT" id="y0S-Oc-wfq"/>
+                <outlet property="priceLabel" destination="Xvi-ep-WhX" id="1p1-jg-m9V"/>
+                <outlet property="saleLabel" destination="CIZ-mz-gb7" id="N9T-M1-pGe"/>
+                <outlet property="titleLabel" destination="kPv-X0-SJE" id="snH-Nn-EG1"/>
+            </connections>
+            <point key="canvasLocation" x="75.5" y="55"/>
+        </tableViewCell>
+    </objects>
+</document>

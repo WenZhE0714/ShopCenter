@@ -1,0 +1,6 @@
+target ‘ShopCenter’ do
+pod ‘ReactiveCocoa’
+pod ‘ReactiveViewModel’
+pod ‘FMDB’
+pod ‘MJRefresh’
+end
