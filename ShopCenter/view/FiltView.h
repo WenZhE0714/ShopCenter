@@ -16,4 +16,5 @@
 @property (strong, nonatomic) PriceRangeTableViewCell *priceCell;
 @property (nonatomic,strong) NSMutableArray *mutableArray;
 @property (nonatomic,strong) NSDictionary *dictionary;
+@property (nonatomic,copy) NSString *choosedRange;
 @end

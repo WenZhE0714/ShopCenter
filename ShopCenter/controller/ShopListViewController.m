@@ -80,6 +80,7 @@
 
 - (void)dissmissShadeView{
     [UIView animateWithDuration:0.2 animations:^{
+        [self.filtButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         self.shadeView.alpha = 0;
         CGRect rect = self.filtView.frame;
         rect.origin = CGPointMake(IPHONE_W, 0);
@@ -90,7 +91,6 @@
 - (void)clickedFilt:(UIButton *)button{
     [self figurePriceRange];
     self.filtView.mutableArray = mutableArray;
-    [self buttonChoosedChangeColor:button];
     [self.view addSubview:self.shadeView];
     [self.view addSubview:self.filtView];
     [UIView animateWithDuration:0.5 animations:^{
@@ -148,6 +148,30 @@
     [self figurePriceRange];
     
     self.searchTextField.delegate = self;
+    
+    [[self.filtView.comfirmButton rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        [self dissmissShadeView];
+//        NSLog(@"asd:%@",self.filtView.choosedRange);
+        if (self.filtView.choosedRange == nil) {
+            desMutableArray = mutableArray;
+        }else{
+            [self filtShopItem];
+        }
+        [self.tableView reloadData];
+
+    }];
+}
+
+- (void)filtShopItem{
+    NSArray *stringArray = [self.filtView.choosedRange componentsSeparatedByString:@"-"];
+    NSMutableArray * newArray = [[NSMutableArray alloc]init];
+
+    for (ShopItemModel *model in mutableArray) {
+        if (model.price.integerValue >= ((NSString *)stringArray[0]).integerValue && model.price.integerValue <= ((NSString *)stringArray[1]).integerValue) {
+            [newArray addObject:model];
+        }
+    }
+    desMutableArray = newArray;
 }
 
 -(void)startArraySort:(NSString *)keyString isAscending:(BOOL)isAscending{
@@ -258,9 +282,9 @@
 
 #pragma mark - buttonOperation
 - (void)clickedButton{
-    [self.generalSortButton addTarget:self action:@selector(SortGeneral:) forControlEvents:UIControlEventTouchUpInside];
-    [self.saleSortButton addTarget:self action:@selector(SortSale:) forControlEvents:UIControlEventTouchUpInside];
-    [self.newestSortButton addTarget:self action:@selector(SortNewest:) forControlEvents:UIControlEventTouchUpInside];
+    [self.generalSortButton addTarget:self action:@selector(sortGeneral:) forControlEvents:UIControlEventTouchUpInside];
+    [self.saleSortButton addTarget:self action:@selector(sortSale:) forControlEvents:UIControlEventTouchUpInside];
+    [self.newestSortButton addTarget:self action:@selector(sortNewest:) forControlEvents:UIControlEventTouchUpInside];
     [self.filtButton addTarget:self action:@selector(clickedFilt:) forControlEvents:UIControlEventTouchUpInside];
     
     __block BOOL upOrDown = YES;
@@ -282,17 +306,17 @@
     }];
 }
 
-- (void)SortGeneral:(UIButton *)button{
+- (void)sortGeneral:(UIButton *)button{
     [self buttonChoosedChangeColor:button];
     [self startArraySort:@"idNo" isAscending:YES];
     [self.tableView reloadData];
 }
-- (void)SortSale:(UIButton *)button{
+- (void)sortSale:(UIButton *)button{
     [self buttonChoosedChangeColor:button];
     [self startArraySort:@"saleNum" isAscending:NO];
     [self.tableView reloadData];
 }
-- (void)SortNewest:(UIButton *)button{
+- (void)sortNewest:(UIButton *)button{
     //最新？？？？暂时先倒排id
     [self buttonChoosedChangeColor:button];
     [self startArraySort:@"idNo" isAscending:NO];
@@ -301,7 +325,6 @@
 
 - (void)buttonChoosedChangeColor:(UIButton *)button{
     [self.searchTextField resignFirstResponder];
-    [self.filtButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [self.saleSortButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [self.priceSortButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [self.newestSortButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];

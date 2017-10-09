@@ -20,11 +20,6 @@
     return self;
 }
 
--(void)layoutSubviews{
-    
-
-}
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
