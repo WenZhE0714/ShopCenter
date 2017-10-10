@@ -12,6 +12,7 @@
 #import "ShopItemViewModel.h"
 #import "ShopItemModel.h"
 #import "FiltView.h"
+#import <MJRefresh.h>
 #import <ReactiveCocoa.h>
 #define IPHONE_H ([UIScreen mainScreen].bounds.size.height)
 #define IPHONE_W ([UIScreen mainScreen].bounds.size.width)
@@ -31,6 +32,7 @@
 @property (strong, nonatomic)ShopItemViewModel *shopItemViewModel;
 @property (strong, nonatomic)FiltView *filtView;
 @property (strong, nonatomic) UIView *shadeView;
+@property (strong, nonatomic) UIView *aView;
 @end
 @implementation ShopListViewController{
     CGFloat preOffSet;
@@ -38,6 +40,7 @@
     ShopItemViewController * shopItemVC;
     NSMutableArray *mutableArray;
     NSMutableArray *desMutableArray;
+    NSInteger pageNum;
 }
 
 -(ShopItemViewModel *)shopItemViewModel{
@@ -125,7 +128,6 @@
     self.filtView.dictionary = dictionary;
 }
 
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
@@ -137,32 +139,80 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    self.tableView.tableFooterView = self.footView;
     
     [self clickedButton];
 
     preOffSet = self.tableView.contentOffset.y;
     
     mutableArray = [self.shopItemViewModel queryData];
-    desMutableArray = mutableArray;
+    pageNum = 0;
+    desMutableArray = [[NSMutableArray alloc]init];
+    for (int i = 0; i <5; i++) {
+        [desMutableArray addObject:mutableArray[i]];
+    }
+    
     [self figurePriceRange];
     
     self.searchTextField.delegate = self;
+    self.aView = [UIView new];
+    self.tableView.tableFooterView = self.aView;
     
     [[self.filtView.comfirmButton rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
         [self dissmissShadeView];
-//        NSLog(@"asd:%@",self.filtView.choosedRange);
+        self.tableView.tableFooterView = self.footView;
         if (self.filtView.choosedRange == nil) {
-            desMutableArray = mutableArray;
+            [self buttonChoosedChangeColor:self.generalSortButton];
+            [self resetArrayAndTableView];
         }else{
             [self filtShopItem];
         }
         [self.tableView reloadData];
-
     }];
+    
+    //下拉刷新
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self refreshData];
+    }];
+    //上拉加载
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [self loadMoreData];
+    }];
+
+}
+
+- (void)refreshData{
+    [self.tableView reloadData];
+    [self.tableView.mj_header endRefreshing];
+}
+
+- (void)loadMoreData{
+    pageNum++;
+    NSInteger endNum = pageNum*5+5;
+    BOOL isFinished = NO;
+
+    if (endNum > mutableArray.count) {
+        endNum = mutableArray.count;
+        if (!isFinished) {
+            for (NSInteger i = pageNum*5; i<endNum; i++) {
+                [desMutableArray addObject:mutableArray[i]];
+            }
+            isFinished = YES;
+            self.tableView.tableFooterView = self.footView;
+            [self.tableView reloadData];
+            self.tableView.mj_footer.hidden = YES;
+        }
+    }else{
+        for (NSInteger i = pageNum*5; i<endNum; i++) {
+            [desMutableArray addObject:mutableArray[i]];
+        }
+        [self.tableView reloadData];
+    }
+    [self.tableView.mj_footer endRefreshing];
 }
 
 - (void)filtShopItem{
+    self.tableView.mj_footer.hidden = YES;
+
     NSArray *stringArray = [self.filtView.choosedRange componentsSeparatedByString:@"-"];
     NSMutableArray * newArray = [[NSMutableArray alloc]init];
 
@@ -179,16 +229,28 @@
     desMutableArray = [[NSMutableArray alloc]initWithArray:[desMutableArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortByA]]];
 }
 
+- (void)resetArrayAndTableView{
+    self.tableView.tableFooterView = self.aView;
+    self.tableView.mj_footer.hidden = NO;
+    pageNum = 0;
+    desMutableArray = [[NSMutableArray alloc]init];
+    for (int i = 0; i <5; i++) {
+        [desMutableArray addObject:mutableArray[i]];
+    }
+}
+
 -(void)searchKeywordThenUpdateArray{
     NSMutableArray *newArray = [[NSMutableArray alloc]init];
     if ([self.searchTextField.text isEqual: @""]) {
-        desMutableArray = mutableArray;
+        [self resetArrayAndTableView];
     }else{
-        for (ShopItemModel *model in mutableArray) {
+        for (ShopItemModel *model in desMutableArray) {
             if ([model.name containsString:self.searchTextField.text]) {
                 [newArray addObject:model];
             }
         }
+        self.tableView.tableFooterView = self.footView;
+        self.tableView.mj_footer.hidden = YES;
         desMutableArray = newArray;
     }
     [self.tableView reloadData];
